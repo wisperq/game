@@ -1,0 +1,520 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    
+}
+
+body{
+    counter-reset: score;
+    background-color: #ccc;
+    background-image: url(../img/Games_Duck_Hunt_Nintendo_Dendy_Nes_025749_9.jpg);
+    background-repeat: no-repeat;
+    min-height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: left bottom;
+    position: relative;
+    overflow: hidden;
+    cursor: url(../cursor/aim.png), crosshair;
+}
+
+.count{
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    transform: translateX(-50%);
+}
+
+.count::after{
+    content: counter(score)
+}
+
+input[type="checkbox"]{
+    position: absolute;
+    left: -100px;
+}
+
+input[type="checkbox"]:checked{
+    counter-increment: score;
+    position: absolute;
+    left: -100px;
+}
+
+input[type="checkbox"]:checked + label{
+    display: none;
+}
+
+.duck{
+    width: 62px;
+    height: 56px;
+    /* outline: 2px solid white; */
+    overflow: hidden;
+    position: absolute;
+    left: -100px;
+    top: 50%;
+}
+
+.duck label{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/duck_hunt_bird_big2.gif);
+    cursor: url(../cursor/aim.png), crosshair;
+}
+
+.bird{
+    width: 62px;
+    height: 56px;
+    /* outline: 2px solid white; */
+    overflow: hidden;
+    position: absolute;
+    left: -100px;
+    top: 50%;
+}
+
+.bird label{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/tHi\ \(1\).gif);
+    cursor: url(../cursor/aim.png), crosshair;
+}
+
+.duck1{
+    animation-name: fly1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes fly1{
+    0%{left: -10%; top: 50%;} 
+    25%{left: 25%; top: 70%;}
+    50%{left: 50%; top: 50%;}
+    75%{left: 75%; top: 30%;}
+    100%{left: 110%; top: 80%;}
+}
+
+.duck2{
+    animation-name: fly2;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes fly2{
+    0%{left: -10%; top: 70%;} 
+    25%{left: 25%; top: 90%;}
+    50%{left: 50%; top: 60%;}
+    75%{left: 75%; top: 50%;}
+    100%{left: 110%; top: 80%;}
+}
+
+.duck3{
+    animation-name: fly3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes fly3{
+    0%{left: -10%; top: 80%;} 
+    25%{left: 35%; top: 40%;}
+    50%{left: 25%; top: 40%;}
+    75%{left: 75%; top: 70%;}
+    100%{left: 110%; top: 80%;}
+}
+
+.duck4{
+    animation-name: fly4;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes fly4{
+    0%{left: 20%; top: -10%;}
+    50%{left: 50%; top: 50%;}
+    100%{left: 80%; top: -10%;}
+}
+
+.duck5{
+    animation-name: fly5;
+    animation-duration:10s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes fly5{
+    0%{left: -10%; top: 10%;}
+    10%{left: 10%; top: 30%;}
+    20%{left: 20%; top: 40%;}
+    30%{left: 30%; top: 50%;}
+    40%{left: 40%; top: 40%;}
+    50%{left: 50%; top: 30%;}
+    60%{left: 40%; top: 20%;}
+    70%{left: 30%; top: 30%;}
+    80%{left: 50%; top: 30%;}
+    90%{left: 75%; top: 30%;}
+    100%{left: 110%; top: 30%;}
+}
+
+.duck6{
+    animation-name: fly6;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+}
+
+@keyframes fly6{
+    0%{left:90%; top: 110%;}
+    50%{left: 50%; top: 50%;}
+    100%{left: 10%; top: 110%;}
+}
+
+.duck7{
+    animation-name: fly7;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+}
+
+@keyframes fly7{
+    0%{left:110%; top: 80%;}
+    100%{left: -10%; top: -10%;}
+}
+
+.duck8{
+    animation-name: fly8;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+}
+@keyframes fly8{
+    0%{left:110%; top: 50%;}
+    100%{left: -10%; top: 50%;}
+}
+
+.duck9{
+    animation-name: fly9;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.1s;
+}
+@keyframes fly9{
+    0%{left:110%; top: 50%;}
+    100%{left: -10%; top: 50%;}
+}
+
+.duck10{
+    animation-name: fly10;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.3s;
+}
+@keyframes fly10{
+    0%{left:110%; top: 50%;}
+    100%{left: -10%; top: 50%;}
+}
+
+.btnReset{
+    background-color: #fd1b1b;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: ;
+    position: absolute;
+    bottom: 25px;
+    left: 60%;
+    color: rgb(234, 255, 0);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    border: 1px solid rgb(234, 255, 0);
+    transition: 0.6s;
+}
+
+.btnReset:hover{
+    transition: 0.6s;
+    color: rgb(255, 183, 0);
+    border: 1px solid rgb(255, 183, 0);
+    background-color: #ff2929;
+}
+
+.btnReset:focus,
+.btnReset:active{
+font-size: 14px;
+transition: 0.2s;
+}
+
+/* .duck11{
+    animation-name: fly11;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.2s;
+}
+
+@keyframes fly11{
+    0%{left:110%; top: 80%;}
+    100%{left: -10%; top: -10%;}
+} */
+
+/* .duck12{
+    animation-name: fly12;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.4s;
+}
+
+@keyframes fly12{
+    0%{left:110%; top: 80%;}
+    100%{left: -10%; top: -10%;}
+} */
+
+/* .duck13{
+    animation-name: fly13;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.6s;
+}
+
+@keyframes fly13{
+    0%{left:110%; top: 80%;}
+    100%{left: -10%; top: -10%;}
+}
+
+.duck14{
+    animation-name: fly14;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.8s;
+} */
+
+/* @keyframes fly14{
+    0%{left:110%; top: 80%;}
+    100%{left: -10%; top: -10%;}
+} */
+
+.duck15{
+    animation-name: fly15;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.2s;
+}
+
+@keyframes fly15{
+    0%{left:110%; top: 75%;}
+    100%{left: -8%; top: -15%;}
+}
+
+/* .duck16{
+    animation-name: fly16;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.4s;
+}
+
+@keyframes fly16{
+    0%{left:110%; top: 75%;}
+    100%{left: -8%; top: -15%;}
+} */
+
+/* .duck17{
+    animation-name: fly17;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.6s;
+}
+
+@keyframes fly17{
+    0%{left:110%; top: 75%;}
+    100%{left: -8%; top: -15%;}
+}
+
+.duck18{
+    animation-name: fly18;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.8s;
+}
+
+@keyframes fly18{
+    0%{left:110%; top: 75%;}
+    100%{left: -8%; top: -15%;}
+} */
+
+.duck19{
+    animation-name: fly19;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.2s;
+}
+
+@keyframes fly19{
+    0%{left:110%; top: 85%;}
+    100%{left: -12%; top: -5%;}
+}
+
+/* .duck20{
+    animation-name: fly20;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.4s;
+}
+
+@keyframes fly20{
+    0%{left:110%; top: 85%;}
+    100%{left: -12%; top: -5%;}
+} */
+
+/* .duck21{
+    animation-name: fly21;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.6s;
+}
+
+@keyframes fly21{
+    0%{left:110%; top: 85%;}
+    100%{left: -12%; top: -5%;}
+}
+
+.duck22{
+    animation-name: fly22;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.8s;
+}
+
+@keyframes fly22{
+    0%{left:110%; top: 85%;}
+    100%{left: -12%; top: -5%;}
+} */
+
+.duck23{
+    animation-name: fly23;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.4s;
+}
+
+@keyframes fly23{
+    0%{left:110%; top: 90%;}
+    100%{left: -14%; top: 0%;}
+}
+
+.duck24{
+    animation-name: fly24;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.6s;
+}
+
+@keyframes fly24{
+    0%{left:110%; top: 95%;}
+    100%{left: -16%; top: 5%;}
+}
+
+.duck25{
+    animation-name: fly25;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.4s;
+}
+
+@keyframes fly25{
+    0%{left:110%; top: 70%;}
+    100%{left: -6%; top: -18%;}
+}
+
+.duck26{
+    animation-name: fly26;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.6s;
+}
+
+@keyframes fly26{
+    0%{left:110%; top: 65%;}
+    100%{left: -4%; top: -20%;}
+}
+
+.duck27{
+    animation-name: fly27;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.8s;
+}
+
+@keyframes fly27{
+    0%{left:110%; top: 60%;}
+    100%{left: -3%; top: -22%;}
+}
+
+.duck28{
+    animation-name: fly28;
+    animation-duration:6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform: scale(-1,1);
+    animation-delay: 0.8s;
+}
+
+@keyframes fly28{
+    0%{left:110%; top: 100%;}
+    100%{left: -18%; top: 5%;}
+}
